@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resume form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body id="form">
+      <div class="main">
+        <div class="sub1">
+          <label for="career">
+      	<h1>CAREER OBJECTIVE</h1>
+      	<select id="career" name="career"><option>...Select Below...</option>
+      		<option>Futher Stuides</option>
+      		<option>Job Trials</option>
+          <option>Job</option>
+      	    <option>Own Bussiness</option>
+      	    <option>Others</option>
+          </select>
+          </label>
+        </div>
+      
+      <div class="sub">
+      	<h1>PERSONAL DETAILS</h1>
+        <label for="name">
+        <input type="text" name="name" id="name" placeholder="enter full name"><br></label>
+        <label for="number">
+        <input type="number" name="number" id="number" placeholder="enter number"><br></label>
+        <label for="email">
+        <input type="text" name="email" id="email" placeholder="enter email"><br></label>
+
+      </div>
+       <div class="sub">
+        <h1>POST GRAUDATION</h1>
+        <label for="post">
+        <select id="post" name="post">
+          <option>---select---</option>
+          <option>M.TECH</option>
+          <option>MBA</option>
+          <option>Others</option>
+        </select><br>
+        </label>
+        <label for="pinst">
+        <input type="text" name="pinst" id="pinst" placeholder="enter your instution name"><br></label>
+         <label for="pper">
+        <input type="number" name="pper" id="pper" placeholder="enter your percentage"><br></label>
+         <label for="pyop">
+        <input type="number" name="pyop" id="pyop" placeholder="enter your year of passing"><br></label>
+      </div>
+      <div class="sub">
+      	<h1>UNDER GRAUDATION</h1>
+        <label for="under">
+        <select id="under" name="under">
+          <option>---select---</option>
+          <option>B.Tech</option>
+          <option>Degree</option>
+          <option>others</option>
+        </select><br></label>
+         <label for="uinst">
+        <input type="text" name="uinst" id="uinst" placeholder="enter your instution name"><br></label>
+        <label for="uper">
+        <input type="number" name="uper" id="uper" placeholder="enter your percentage"><br></label>
+        <label for="uyop">
+        <input type="number" name="uyop" id="uyop" placeholder="enter your year of passing"><br></label>
+      </div>
+       <div class="sub">
+         <h1>INTER</h1>
+         <label for="inter">
+        <select id="inter" name="inter" >
+          <option>---select---</option>
+          <option>MPC</option>
+          <option>BIPC</option>
+          <option>Others</option>
+        </select><br></label>
+        <label for="iinst">
+        <input type="text" name="iinst" id="iinst" placeholder="enter your instution name"><br></label>
+        <label for="iper">
+        <input type="number" name="iper" id="iper" placeholder="enter your percentage"><br></label>
+        <label for="iyop">
+        <input type="number" name="iyop" id="iyop" placeholder="enter your year of passing"><br></label>
+       </div>
+        <div class="sub">
+          <h1>SCHOOLING</h1>
+          <label for="ssc">
+        <select id="ssc" name="ssc">
+          <option>---select---</option>
+          <option>SSC</option>
+          <option>CBSC</option>
+          <option>Others</option>
+        </select><br></label>
+        <label for="sinst">
+        <input type="text" name="sinst" id="sinst" placeholder="enter your instution name"><br></label>
+         <label for="sper">
+        <input type="number" name="sper" id="sper" placeholder="enter your percentage"><br></label>
+        <label for="syop">
+        <input type="number" name="syop" id="syop" placeholder="enter your year of passing"><br></label>
+        </div>
+</div>
+<button type="button" id="button" name="button" onclick="submitdata();"><h3>SAVE</h3></button>
+</body>
+</html>
+
+<script type="text/javascript">
+  function submitdata()
+  {
+    var career=document.getElementById("career").value;
+
+   var name=document.getElementById("name").value;
+   var number=document.getElementById("number").value;
+    var email=document.getElementById("email").value;
+
+    var post=document.getElementById("post").value;
+   var pinst=document.getElementById("pinst").value;
+    var pper=document.getElementById("pper").value;
+     var pyop=document.getElementById("pyop").value;
+
+    var under=document.getElementById("under").value;
+   var uinst=document.getElementById("uinst").value;
+   var uper=document.getElementById("uper").value;
+     var uyop=document.getElementById("uyop").value;
+
+       var inter=document.getElementById("inter").value;
+   var iinst=document.getElementById("iinst").value;
+   var iper=document.getElementById("iper").value;
+     var iyop=document.getElementById("iyop").value;
+
+       var ssc=document.getElementById("ssc").value;
+   var sinst=document.getElementById("sinst").value;
+   var sper=document.getElementById("sper").value;
+     var syop=document.getElementById("syop").value;
+
+var indexedDB=window.indexedDB || window.mozIndexedDB ||window.msIndexedDB ||window.webkitIndexedDB;
+var store;
+     var open;
+     var result;
+     var tx;
+
+     var request=indexedDB.open("database",1);
+     request.onupgradeneeded = function(e){
+        open=e.target.result;
+        store=open.createObjectStore("resumedata",{keyPath:"name"});
+
+
+
+     }
+        request.onerror =  function(e){
+          console.log("error"+e);
+
+      
+     }
+        request.onsuccess=function(e){
+      open=e.target.result;
+      tx=open.transaction("resumedata",'readwrite');
+      store=tx.objectStore("resumedata");
+      store.put({
+
+           career:career,
+           name:name,
+           number:number,
+           email:email,
+        education:[
+            {
+              degree:post,
+              inst:pinst,
+              per:pper,
+              yop:pyop
+            },
+            {
+              degree:under,
+              inst:uinst,
+              per:uper,
+              yop:uyop
+            },
+            {
+             degree:inter,
+              inst:iinst,
+              per:iper,
+              yop:iyop
+            },
+            {
+             degree:ssc,
+              inst:sinst,
+              per:sper,
+              yop:syop
+            }
+            ]
+        });
+     }
+window.open("profiles.html","_self");
+  }   
+</script>

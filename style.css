@@ -1,0 +1,352 @@
+/*for index.html*/
+#body{
+	background:#F5B7B1;
+	text-align:center;
+}
+.maindiv
+{
+text-align: center;	
+}
+.subdiv
+{
+	justify-content:center;
+	background:#086A87;
+    width:95%;
+    height:25%;
+    margin:2%;
+    text-align: center;
+    border-radius:2%;
+  
+} 
+#button1{
+	width:50%;
+} 
+.subdiv1
+{
+	background:#D7BDE2;
+	width:57%;
+	margin-left:20%;
+	text-align: center;
+} 
+#image{
+	margin: 2%;
+	width:25%;
+}
+.proflie
+{
+	color:red;
+}
+
+
+/*for moblie view of index.html*/
+@media screen and (max-width:480px)
+{
+#body{
+	background:#F5B7B1;
+	text-align:center;
+}
+.maindiv
+{
+text-align: center;	
+}
+.subdiv
+{
+	justify-content:center;
+	background:#086A87;
+    width:95%;
+    height:25%;
+    text-align: center;
+    border-radius:2%;
+  
+} 
+.subdiv1
+{
+	background:#D7BDE2;
+	width:60%;
+}
+#button1{
+	width:50%;
+} 
+#image{
+	width:45%;
+}
+}
+
+
+
+/*for moblie view of index.html*/
+@media screen and (min-width:480px) and (max-width:780px)
+{
+#body{
+	background:#F5B7B1;
+	text-align:center;
+}
+.maindiv
+{
+text-align: center;	
+}
+.subdiv
+{
+	justify-content:center;
+	background:#086A87;
+    width:95%;
+    height:25%;
+    text-align: center;
+    border-radius:2%;
+  
+} 
+.subdiv1
+{
+	background:#D7BDE2;
+	width:60%;
+}
+#button1{
+	width:65%;
+} 
+#image{
+	width:65%;
+}
+}
+
+
+
+/*for form.html*/
+#form
+{
+	background:grey;
+	text-align:center;
+}
+.main{
+	background:silver;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+  box-shadow: 0px 0px 0px 0px;
+  border-radius:2%;
+	}
+.sub1
+{
+	justify-content:center;
+	background:#086A87;
+    width:85%;
+    height:25%;
+    margin:2%;
+    text-align: center;
+    border-radius:2%;
+  
+}  
+.sub{
+	width:45%;
+	background:#086A87;
+	margin:2%;
+	text-align:center;
+	border-radius:2%;
+}
+select,input{
+	margin:1%;
+width: 85%;
+}
+button
+{
+	width:15%;
+	margin: 1%;
+	border-radius:30%;
+}
+
+/*moblie view*/
+@media screen and (max-width:480px)
+{
+#form
+{
+	background:grey;
+	text-align:center;
+}
+.main{
+	background:silver;
+	display:inline;
+	justify-content: space-around;
+  box-shadow: 0px 0px 0px 0px;
+  border-radius:2%;
+	}
+.sub1
+{
+	
+	background:#086A87;
+	justify-content:center;
+    width:85%;
+    height:25%;
+    margin:5%;
+    text-align: center;
+    border-radius:2%;
+  
+}  
+.sub{
+	width:85%;
+	background:#086A87;
+	margin:5%;
+	text-align:center;
+	border-radius:2%;
+}
+}
+
+/*tablet view*/
+@media screen and (min-width:480px) and (max-width:780px)
+{
+#form
+{
+	background:silver;
+	text-align:center;
+}
+.main{
+	background:grey;
+	display:inline;
+	justify-content: space-around;
+  box-shadow: 0px 0px 0px 0px;
+  border-radius:2%;
+	}
+.sub1
+{
+	justify-content:center;
+	background:#086A87;
+    width:85%;
+    height:25%;
+    margin:5%;
+    text-align: center;
+    border-radius:2%;
+  
+}  
+.sub{
+	width:85%;
+	background:#086A87;
+	margin:5%;
+	text-align:center;
+	border-radius:2%;
+}
+}
+
+
+/*profile css*/
+#body1{
+	background:#F5B7B1;
+	text-align:center;
+}
+#b{
+	width:5%;
+	height:2%;
+	
+}
+@media screen and (max-width:480px){
+#body1{
+	background:#F5B7B1;
+	text-align:center;
+}
+#b{
+	width:20%;
+	height:2%;
+	
+}	
+}
+@media screen and (min-width:480px) and (max-width:780px) {
+#body1{
+	background:#F5B7B1;
+	text-align:center;
+}
+#b{
+	width:15%;
+	height:2%;
+	
+}	
+}
+/*resume css*/
+body{
+	background:maroon;
+}
+.maindiv{
+	background:silver;
+	margin:2%;
+	justify-content:center;
+	display:flex;
+
+}
+.leftdiv{
+	background:#F9E79F;
+	margin:5%;
+	width:40%;
+	height:54%;
+}
+
+.rightdiv{
+	background: #D0ECE7;
+	margin:4%; 
+	width:35%;
+	justify-content:center;
+	margin-left:8%;
+}
+
+
+@media screen and (max-width:480px){
+body{
+	background:maroon;
+	
+}
+.maindiv{
+	background:grey;
+	margin:6%;
+		width:95%;
+	justify-content:center;
+    display: inline;
+}
+.leftdiv{
+	background:#F9E79F;
+	margin:2%;
+	width:95%;
+
+	/*margin-left:15%;*/
+}
+
+
+
+}
+.rightdiv{
+	background: #D0ECE7;
+	margin:2%; 
+	width:85%;
+	margin-left:8%;
+}
+img{
+	width:45%;
+	margin:5%;
+}
+
+@media screen and (min-width:480px) and (max-width:780px) {
+body{
+	background:maroon;
+	
+}
+.maindiv{
+	background:grey;
+	margin:6%;
+		width:95%;
+	justify-content:center;
+    display: inline;
+}
+.leftdiv{
+	background:#F9E79F;
+	margin:6%;
+	width:65%;
+	margin-left:15%;
+}
+
+
+
+}
+.rightdiv{
+	background: #D0ECE7;
+	margin:2%; 
+	width:85%;
+	margin-left:8%;
+}
+img{
+	width:45%;
+	margin:5%;
+}
